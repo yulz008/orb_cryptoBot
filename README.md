@@ -37,7 +37,7 @@ $ pip install numpy
 The trading bot will require for you to provide your binance "API_KEY" and "API_SECRET", this can be generated on your binance account under "API MANAGEMENT".
 Once you've obtained this two code on your account, you can paste it on "config.py" file located at orb_cryptoBot/config.py.
 
-If the API keys provided is correct, the bot will prompt "API Keys Validated" once the bot is started. If the provided API keys is incorrect the bot will prompt "Invalid API Keys!"
+If the API keys provided is correct, the bot will prompt "API Keys Validated" once the bot started. If the provided API keys is incorrect the bot will prompt "Invalid API Keys!"
 
 
 ## Strategy
