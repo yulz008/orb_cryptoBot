@@ -1,11 +1,11 @@
 # Introduction
 Orb Crypto Bot is a trading robot for BTCUSDT written in python
 
-# Package Content
+## Package Content
 
-bot.py     - entry point of this trading bot
-pa.py      - price action class defition for strategy
-config.py  - config file for "API_KEY" and "API_SECRET"
+ - bot.py     - entry point of this trading bot
+ - pa.py      - price action class defition for strategy
+ - config.py  - config file for "API_KEY" and "API_SECRET"
 
 ## Warning
 This bot uses API keys to interact with your binance account. If you have no idea about APIs and coding in python, please do not attempt to use this bot.
