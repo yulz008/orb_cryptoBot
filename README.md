@@ -41,3 +41,49 @@ If the API keys provided is correct, The bot will prompt "API Keys Validated" on
 The strategy for this file is located on different python file as class (pa.py). This strategy  is a python implementation of previous project (GOLD_ORB).
 This class contains a member function open_range_breakout. This function will read incoming tick data (price change) from the websocket. The function will generate the buy and sell signal. Thus this bot only uses price action to generate entry signals. The output is an integer type, it will output "11" for buy-long signal , "10" for sell-short signal and "0" if no signal was generated. This outputs will be pass to the bot.py which will send order to binance including the stoploss and takeprofit orders. 
 
+### Strategy Logic
+
+//execute only at the closing price of each candle
+1. 15 minutes after market open, get initial range low and high of the candle. (Initial support and resistance)
+2. at succeeding candles update range high and low, else do nothing.
+3. on final range, generate buy/sell signal at breakout/breakdown.
+4. repeat
+
+### Overall Bot Logic
+
+//After program is compiled and now running
+1. Read inputs
+2. Check if API keys are valid, prompt error message if invalid
+3. Open websocket connection, prompt to terminal
+4. On each message of the websocket:
+     - check for current position of BTC
+     - print ticker price
+     - If ticker price is a closing price:
+          - print clossing price
+          - call open_range_breakout to generate buy/sell signal
+          - if buy/sell signal, and no current position of BTC:
+             - Send order to binance to open position
+             - Send order for SL and TP
+
+## Inputs
+
+The inputs for this bot can be configured on the bot.py source file.
+
+TRADE_SYMBOL   - the desired symbol to trade, input is in str
+TRADE_QUANTITY - the size/volume of your trade, please compute this carefully it varies from symbol to symbol, input is in decimal
+TAKE_PROFIT    - the percentage move on price before taking profit, input is in decimal (e.g if 10% desired move, input 10)
+STOP_LOSS      - the percentage move on price before exiting the position with a loss, input in decimal (e.g if -2% desired move, input 2)
+
+
+## How to use and install the bot
+
+1. download/pull the repository to your local folder.
+2. from the command line, change the directory to your local folder
+3. run the program:  \**directory\ python bot.py 
+4. If the bot successfully loaded it will output ticker prices from the command line.
+5. The bot is now running and interacting with binance.
+![image](https://user-images.githubusercontent.com/117939069/207553604-256ae5f3-452d-4d81-8ef0-e18f594d92fc.png)
+
+
+               
+
