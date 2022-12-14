@@ -1,7 +1,7 @@
 #Author: Ulysses O. Andulte
 #Created Date: November 2022
 
-import websocket,json, pprint, talib, numpy
+import websocket,json,numpy
 import config,pa
 from binance.client import Client
 from binance.enums import *
@@ -13,7 +13,6 @@ from datetime import datetime
 
 #inputs
 TRADE_SYMBOL = 'BTCUSDT'
-POSITION_SIZE = 100
 TRADE_QUANTITY = 0.018 
 TAKE_PROFIT = 5 #in percent
 STOP_LOSS = 2 #in percent
@@ -21,7 +20,7 @@ STOP_LOSS = 2 #in percent
 
 #Global Variables and objects
 price_action = Price_Action()
-SOCKET = "wss://stream.binance.com:9443/ws/btcusdt@kline_1h"
+SOCKET = "wss://stream.binance.com:9443/ws/btcusdt@kline_15m"
 closes = []
 in_position = False
 client = Client(config.API_KEY, config.API_SECRET)
