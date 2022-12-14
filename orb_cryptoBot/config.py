@@ -1,0 +1,2 @@
+API_KEY = 'inputapitkeyhereitisfoundonyourbinanceaccout'
+API_SECRET = 'inputapiketsecrethereitisfoundonyourbinanceaccount'
