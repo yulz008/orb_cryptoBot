@@ -69,10 +69,10 @@ This class contains a member function open_range_breakout. This function will re
 
 The inputs for this bot can be configured on the bot.py source file.
 
-TRADE_SYMBOL   - the desired symbol to trade, input is in str
-TRADE_QUANTITY - the size/volume of your trade, please compute this carefully it varies from symbol to symbol, input is in decimal
-TAKE_PROFIT    - the percentage move on price before taking profit, input is in decimal (e.g if 10% desired move, input 10)
-STOP_LOSS      - the percentage move on price before exiting the position with a loss, input in decimal (e.g if -2% desired move, input 2)
+ - TRADE_SYMBOL   - the desired symbol to trade, input is in str
+ - TRADE_QUANTITY - the size/volume of your trade, please compute this carefully it varies from symbol to symbol, input is in decimal
+ - TAKE_PROFIT    - the percentage move on price before taking profit, input is in decimal (e.g if 10% desired move, input 10)
+ - STOP_LOSS      - the percentage move on price before exiting the position with a loss, input in decimal (e.g if -2% desired move, input 2)
 
 
 ## How to use and install the bot
