@@ -84,6 +84,9 @@ The inputs for this bot can be configured on the bot.py source file.
 5. The bot is now running and interacting with binance.
 ![image](https://user-images.githubusercontent.com/117939069/207553604-256ae5f3-452d-4d81-8ef0-e18f594d92fc.png)
 
+## Reference
 
-               
+## Disclaimer
+
+This code is just meant to be used for learning. In no way do I promise profitable trading outcomes. Do not risk money that you can't afford to lose because the authors and any affiliates assume no responsibility for your trading results. This tactics DO NOT come with ANY warranty, thus there may be flaws in the code. Investments are risky by nature! Future outcomes cannot be predicted based on past performance!              
 
