@@ -25,7 +25,7 @@ install python 3.10.0 (or newer version)
 additional packages:
 ```
 $ pip install python-binance
-$ pip install websockets
+$ pip install websocket-client
 $ pip install numpy
 ```
 
